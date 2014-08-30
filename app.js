@@ -6,7 +6,7 @@ $(document).ready(function(){
 			
 		    while(numberInput % 1!=0){
 		    	numberInput = prompt("Enter any whole number");
-		    	numberInput = Number(numberInput);
+		    	// numberInput = +numberInput;
 				if(numberInput % 1!=0){
 				alert(numberInput + " is not a whole number.  Please enter a whole number.");	
 				}
