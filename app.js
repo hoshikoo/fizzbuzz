@@ -1,13 +1,14 @@
 $(document).ready(function(){
 
-	    var numberInput = undefined;
-		var i = undefined;
-		var fizzBuzz =function(){
-		    while(i % 1!=0){
+	    
+		var fizzBuzz =function(numberInput){
+			var numberInput = undefined;
+			
+		    while(numberInput % 1!=0){
 		    	numberInput = prompt("Enter any whole number");
-				i = + "numberInput";
-				if(i % 1!=0){
-				alert(i + " is not a whole number.  Please enter a whole number.");	
+		    	numberInput = Number(numberInput);
+				if(numberInput % 1!=0){
+				alert(numberInput + " is not a whole number.  Please enter a whole number.");	
 				}
 		    }
 			
@@ -22,16 +23,21 @@ $(document).ready(function(){
 		        $("<p>Buzz</p>").appendTo("#result");
 		        }
 		    	else{
+		    		
 		        $("<p>"+i+"</p>").appendTo("#result");
 		        }
 			};	
-		}
+		};
 	
+fizzBuzz(30);
+
 	$("#start").click(function(e){
 		e.preventDefault();
 	    $("p").remove();
-	    fizzBuzz;
-		}	
-	});
+	    fizzBuzz();
+	});	
 
+	
 });
+
+// });
